@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+import { Title } from '@angular/platform-browser';
+import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
+
 
 @Component({
   selector: 'app-root',
@@ -9,8 +11,20 @@ import { TranslateService } from '@ngx-translate/core';
 export class AppComponent {
   title = 'angular-translate-sample';
 
-constructor(public  translate: TranslateService) 
-{}
+constructor(public  translate: TranslateService , private titles : Title) 
+{
 
-
+  translate.onLangChange.subscribe((event: LangChangeEvent) => {
+  translate.get('page_title').subscribe((res: string) => {
+   titles.setTitle(res);
+  });
+});
 }
+}
+
+
+
+
+
+
+

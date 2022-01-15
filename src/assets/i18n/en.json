@@ -9,6 +9,7 @@
     "home_work": "Home Work!",
     "angular" : "Angular Translate Sample",
     "English" : "English",
-    "Arabic" : "Arabic"
+    "Arabic" : "Arabic",
+    "page_title": "Page Name"
 
 }
