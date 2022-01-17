@@ -30,9 +30,14 @@ export class AppComponent {
     // use it if you want to use english as default language
 
     translate.onLangChange.subscribe((event: LangChangeEvent) => {
-      translate.get('pageTitle').subscribe((res: string) => {
-        titles.setTitle(res);
-      });
+      console.log(event);
+      // translate.get('pageTitle').subscribe((res: string) => {
+      //   titles.setTitle(res);
+      //   console.log(res)
+      // });
+      console.log(event.translations['pageTitle'])
+      titles.setTitle(event.translations['pageTitle'] );
+      
     });
     // titles.setTitle(`${this.translate.instant('pageTitle')}`);
   }
