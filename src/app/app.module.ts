@@ -10,13 +10,12 @@ import { HomeComponent } from './home/home.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { FeaturesComponent } from './features/features.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     PricingComponent,
-    FeaturesComponent
+    FeaturesComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -27,14 +26,14 @@ import { FeaturesComponent } from './features/features.component';
       loader: {
         provide: TranslateLoader,
         useFactory: CreateTranslateLoader,
-        deps: [HttpClient]
-    }
-  })
+        deps: [HttpClient],
+      },
+    }),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
 
 export function CreateTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');

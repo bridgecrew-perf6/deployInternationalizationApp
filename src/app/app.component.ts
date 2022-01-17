@@ -11,14 +11,29 @@ export class AppComponent {
   title = 'angular-translate-sample';
 
   constructor(public translate: TranslateService, private titles: Title) {
-    // translate.onLangChange.subscribe((event: LangChangeEvent) => {
-    //   translate.get('pageTitle').subscribe((res: string) => {
-    //      titles.setTitle(res);
-    //   });
-    // });
+    this.translate.setDefaultLang('en');
+    // this.translate.use(localStorage.getItem('lang') || 'en' );
 
-  titles.setTitle(
-      `${this.translate.instant('pageTitle')}`
-    );
+    // if (localStorage.getItem('lang') || 'ar') {
+    //   this.translate.use('ar');
+    // } else {
+    //   this.translate.use('en');
+    // }
+
+    // if (localStorage.getItem('lang') == 'ar') {
+    //   this.translate.use('ar');
+    // } else {
+    //   localStorage.removeItem('ar');
+    //   this.translate.use('en');
+    // }
+
+    // use it if you want to use english as default language
+
+    translate.onLangChange.subscribe((event: LangChangeEvent) => {
+      translate.get('pageTitle').subscribe((res: string) => {
+        titles.setTitle(res);
+      });
+    });
+    // titles.setTitle(`${this.translate.instant('pageTitle')}`);
   }
 }
