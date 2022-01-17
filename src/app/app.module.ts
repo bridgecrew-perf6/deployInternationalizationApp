@@ -19,7 +19,7 @@ import { FeaturesComponent } from './features/features.component';
     FeaturesComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     HttpClientModule,
     TranslateModule.forRoot({

@@ -1,14 +1,14 @@
 {
-    "logo" : "أنجولار",
-    "Home": "الصفحة الرئيسية",
-    "Features": "مميزات",
-    "Pricing": "التسعير",
-    "Choose_Language": "اختر اللغة",
-    "pricing_work": " !التسعير يعمل ",
-    "features_work"   : " !مميزات يعمل ",
-    "home_work"   : " !الصفحة الرئيسية يعمل ",
-    "angular"  : " نموذج ترجمة أنجولار ",
-    "English" : "الإنجليزية",
-    "Arabic" : "العربية",
-    "page_title": "اسم الصفحة"
+  "logo": "أنجولار",
+  "Home": "الصفحة الرئيسية",
+  "Features": "مميزات",
+  "Pricing": "التسعير",
+  "Choose_Language": "اختر اللغة",
+  "pricing_work": " !التسعير يعمل ",
+  "features_work": " !مميزات يعمل ",
+  "home_work": " !الصفحة الرئيسية يعمل ",
+  "angular": " نموذج ترجمة أنجولار ",
+  "English": "الإنجليزية",
+  "Arabic": "العربية",
+  "pageTitle": "أنجولار"
 }
